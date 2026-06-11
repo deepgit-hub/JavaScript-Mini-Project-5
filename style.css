@@ -50,3 +50,27 @@ td{
     border:1px solid #334155;
 }
 
+/* INPUTS */
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#1e293b;
+    color: black;
+    font-size:14px;
+    font-weight:500;
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border:2px solid #22c55e;
+}
+
