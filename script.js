@@ -12,6 +12,8 @@ var sww = 0
 var highm = 0
 var lowm = 100
 var avgm =0
+var total_mark=0
+var am = 0
 function addi()
 {
     var l = document.createElement("tr")
@@ -30,14 +32,6 @@ function addi()
     else{
         failedstudents++
     }
-    if(Number(ai.value<75))
-    {
-        nestudents++
-    }
-    else
-    {
-        sww++
-    }
     if(Number(mi.value)>highm)
     {
         highm=Number(mi.value)
@@ -46,12 +40,14 @@ function addi()
     {
         lowm=Number(mi.value)
     }
+    total_mark+=Number(mi.value)
+    am = total_mark/studentcount
 
 }
 function report(event)
 {
     var row = document.createElement("tr")
-    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+"<td>"+nestudents+"</td>"+"<td>"+sww+"</td>"+"<td>"+avgm+"</td>"+"<td>"+highm+"</td>"+"<td>"+lowm+"</td>"
+    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+avgm+"</td>"+"<td>"+highm+"</td>"+"<td>"+lowm+"</td>"
     rt.append(row)
     event.target.disabled=true
 }
