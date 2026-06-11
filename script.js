@@ -13,13 +13,14 @@ var passedstudents =0
 var failedstudents =0
 var nestudents=0
 var sww = 0
-var highm = 0
-var lowm = 100
-var avgm =0
+var highp = 0
+var lowp = 100
+var avgp =0
 var total_mark=0
 var am = 0
 var result=""
 var p = 0
+var total_percentage =0
 function addi()
 {
     if(ni.value=="" || mo.value=="" || mt.value=="" || mth.value==""|| mf.value=="" || mfv.value=="" || di.value=="" || yi.value=="")
@@ -30,13 +31,25 @@ function addi()
     studentcount++
 
     total_mark = Number(mo.value)+Number(mt.value)+Number(mth.value)+Number(mf.value)+Number(mfv.value)
-    p = (total_mark*5)/100
-    if(p>75)
+    p = total_mark/5
+    total_percentage+=p
+    if(p>40)
     {
         result="Pass"
+        passedstudents++
+
     }
     else{
         result ="Fail"
+        failedstudents++
+    }
+    if(p>highp)
+    {
+        highp=p
+    }
+    if(p<lowp)
+    {
+        lowp=p
     }
     var l = document.createElement("tr")
     l.innerHTML ="<td>"+ni.value+"</td>"+"<td>"+di.value+"</td>"+"<td>"+yi.value+"</td>"+"<td>"+p+"</td>"+"<td>"+result+"</td>"
@@ -55,7 +68,8 @@ function addi()
 function report(event)
 {
     var row = document.createElement("tr")
-    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+"<td>"+avgm+"</td>"+"<td>"+highm+"</td>"+"<td>"+lowm+"</td>"
+    avgp = total_percentage/studentcount
+    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+"<td>"+avgp+"</td>"+"<td>"+highp+"</td>"+"<td>"+lowp+"</td>"
     rt.append(row)
     event.target.disabled=true
 }
