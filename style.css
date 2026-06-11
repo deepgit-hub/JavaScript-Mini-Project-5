@@ -102,5 +102,13 @@ button:hover{
     border-radius:12px;
     overflow:hidden;
 }
+/* REPORT TABLE */
 
+#report-table{
+    width:95%;
+    margin-top:20px;
+    background:#111827;
+    border-radius:12px;
+    overflow:hidden;
+}
 
