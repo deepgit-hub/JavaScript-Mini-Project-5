@@ -41,3 +41,11 @@ function addi()
     }
 
 }
+function report(event)
+{
+    var row = document.createElement("tr")
+    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+"<td>"+nestudents+"</td>"+"<td>"+sww+"</td>"+"<td>"+avgm+"</td>"+"<td>"+highm+"</td>"+"<td>"+lowm+"</td>"
+    rt.append(row)
+    event.target.disabled=true
+}
+
