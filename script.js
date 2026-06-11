@@ -1,5 +1,7 @@
 var ni = document.getElementById("name-input")
 var mi = document.getElementById("mark-input")
+var di = document.getElementById("department-input")
+var yi = document.getElementById("year-input")
 var dt = document.getElementById("data-table")
 var rt = document.getElementById("report-table")
 var studentcount = 0
@@ -13,8 +15,13 @@ var avgm =0
 function addi()
 {
     var l = document.createElement("tr")
-    l.innerHTML ="<td>"+ni.value+"</td>"+"<td>"+mi.value+"</td>"+"<td>"+ai.value+"</td>"+"<td>"+li.value+"</td>"+"<td>"+ml.value+"</td>"
+    l.innerHTML ="<td>"+ni.value+"</td>"+"<td>"+mi.value+"</td>"+"<td>"+di.value+"</td>"+"<td>"+yi.value+"</td>"
     dt.append(l)
+    ni.value=""
+    mi.value=""
+    di.value=""
+    yi.value=""
+
     studentcount++
     if(Number(mi.value>=40))
     {
