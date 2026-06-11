@@ -19,4 +19,22 @@ h1{
     font-weight:800;
     margin-bottom:20px;
 }
+/* FORM CONTAINER */
+
+#input-container{
+    width:90%;
+    max-width:700px;
+    background:#111827;
+    border-radius:16px;
+    padding:25px;
+    border:1px solid #1e293b;
+    color: black;
+}
+
+/* TABLES */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
