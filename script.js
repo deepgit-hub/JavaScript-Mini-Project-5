@@ -16,16 +16,18 @@ var total_mark=0
 var am = 0
 function addi()
 {
+    if(ni.value=="" || mi.value=="" || di.value=="" || yi.value=="")
+    {
+        alert("Please fill all the feilds")
+        return
+    }
     var l = document.createElement("tr")
     l.innerHTML ="<td>"+ni.value+"</td>"+"<td>"+mi.value+"</td>"+"<td>"+di.value+"</td>"+"<td>"+yi.value+"</td>"
     dt.append(l)
-    ni.value=""
-    mi.value=""
-    di.value=""
-    yi.value=""
+    
 
     studentcount++
-    if(Number(mi.value>=40))
+    if(Number(mi.value)>=40)
     {
         passedstudents++
     }
@@ -41,13 +43,16 @@ function addi()
         lowm=Number(mi.value)
     }
     total_mark+=Number(mi.value)
-    am = total_mark/studentcount
-
+    avgm = total_mark/studentcount
+    ni.value=""
+    mi.value=""
+    di.value=""
+    yi.value=""
 }
 function report(event)
 {
     var row = document.createElement("tr")
-    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+avgm+"</td>"+"<td>"+highm+"</td>"+"<td>"+lowm+"</td>"
+    row.innerHTML = "<td>"+studentcount+"</td>" + "<td>"+passedstudents+"</td>"+"<td>"+failedstudents+"</td>"+"<td>"+avgm+"</td>"+"<td>"+highm+"</td>"+"<td>"+lowm+"</td>"
     rt.append(row)
     event.target.disabled=true
 }
