@@ -3,19 +3,36 @@
         <title>Student Report Generator</title>
         <link rel="stylesheet" href="style.css">
     </head>
-<body>
+    <body>
         <center><br><br><br>
             <div id="input-container">
         <form>
             <table border="1">
                 <tr>
                     <th>Name</th>
-                    <td><input type="text" id="name-input"></td>
+                    <td><input type="text" id="name-input" placeholder="Enter Name"></td>
                 </tr>
                 <tr>
-                    <th>Mark</th>
-                    <td><input type="number" id="mark-input"></td>
+                    <th>Subject One Mark</th>
+                    <td><input type="number" id="mark1-input" placeholder="Subject One Mark"></td>
                 </tr>
+                 <tr>
+                    <th>Subject Two Mark</th>
+                    <td><input type="number" id="mark2-input" placeholder="Subject Two Mark"></td>
+                </tr>
+                 <tr>
+                    <th>Subject Three Mark</th>
+                    <td><input type="number" id="mark3-input" placeholder="Subject Three Mark"></td>
+                </tr>
+                 <tr>
+                    <th>Subject Four Mark</th>
+                    <td><input type="number" id="mark4-input" placeholder="Subject Four Mark"></td>
+                </tr>
+                 <tr>
+                    <th>Subject Five Mark</th>
+                    <td><input type="number" id="mark5-input" placeholder="Subject Five Mark"></td>
+                </tr>
+            
                  <tr>
                     <th>Department</th>
                     <td><select id="department-input">
@@ -32,50 +49,34 @@
                         <option>3rd</option>
                     </select></td>
                 </tr>
-                <tr>
-                    <th>Attendence Percentage</th>
-                    <td><input type="number" id="attendence-input"></td>
-                </tr>
-                <tr>
-                    <th>Late Days</th>
-                    <td><input type="number" id="late-input"></td>
-                </tr>
-                <tr>
-                    <th>Medical Certificate</th>
-                    <td><select id="medical-input">
-                        <option>YES</option>
-                        <option>NO</option>
-                    </select></td>
-                </tr>
+               
             </table>
         </form>
         </div>
-     <br>
+        <br>
         <button id="add-student" onclick="addi()" type="button">Add Student</button>
         <br><br><br><br><br> 
         <table id="data-table" border="3">
            <tr> <th>Name</th>
-            <th>Mark</th>
-            <th>Attendence</th>
-            <th>Late Days</th>
-            <th>Medical Cert</th>
+            <th>Department</th>
+            <th>Year</th>
+            <th>Percentage</th>
+            <th>Result</th>
+    
             </tr>
         </table><br><br><br><br><br>    
         <table id="report-table">
-            <tr><th>Total Students \\</th>
-            <th>Passed Students</th>
-            <th>Failed Students</th>
-            <th>Not Eligible Students</th>
-            <th>Students With Warning</th>
-            <th>Average Mark</th>
+            <tr><th>Total Students </th>
+            <th>Passed Students </th>
+            <th>Failed Students </th>
+            <th>Average Mark </th>
             <th>Highest Mark</th>
             <th>Lowest Mark</th></tr>
             
         </table>
         <br><br><br>
-        <button id="report" onclick="report()" type="button">Generate Report</button>
+        <button id="report" onclick="report(event)" type="button">Generate Report</button>
         </center>
         <script src="script.js"></script>
     </body>
 </html>
-
