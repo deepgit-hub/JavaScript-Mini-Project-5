@@ -120,3 +120,43 @@ button:hover{
 #report-table tr:hover td{
     background:#1e293b;
 }
+
+/* SECTION SPACING */
+
+#add-student{
+    margin-top:15px;
+}
+
+#report{
+    margin-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    #input-container{
+        width:100%;
+    }
+
+    th,
+    td{
+        font-size:12px;
+        padding:8px;
+    }
+
+    button{
+        width:100%;
+    }
+
+    #data-table,
+    #report-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+}
